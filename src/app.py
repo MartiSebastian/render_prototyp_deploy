@@ -9,11 +9,11 @@ import plotly.graph_objects as go
 # marker_svg = open(r"C:\Users\sebas\Documents\ladestationen_poi.svg").read()
 
 # Vorbereiten der Daten
-df = gpd.read_file("Daten_Ladestationen.csv")
+df = gpd.read_file("https://raw.githubusercontent.com/SebaMarti/render_prototyp_deploy/main/Daten_Ladestationen.csv")
 gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(x=df["X"], y=df["Y"], crs="EPSG:2056"))
 gdf_WGS84 = gdf.to_crs(4326)
 
-df_positionen =  gpd.read_file("Positionen.csv")
+df_positionen =  gpd.read_file("https://raw.githubusercontent.com/SebaMarti/render_prototyp_deploy/main/Positionen.csv")
 gdf_positionen = gpd.GeoDataFrame(df_positionen, geometry=gpd.points_from_xy(x=df_positionen["X"], y=df_positionen["Y"], crs="EPSG:2056"))
 gdf_positionen_WGS84 = gdf_positionen.to_crs(4326)
 

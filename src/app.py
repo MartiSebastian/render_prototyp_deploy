@@ -48,7 +48,7 @@ gdf_positionen_WGS84 = gpd.GeoDataFrame(df_positionen, geometry=gpd.points_from_
 Orte = list(gdf_positionen_WGS84["orte"])
 
 # Mapbox token setzen
-mapbox_token = "pk.eyJ1Ijoic2VibWFyIiwiYSI6ImNsZjJvYXRmYzBrZzgzeW56ZDFqbXR5b2YifQ.aQ-V0ibypweIOStal92Juw"
+mapbox_token = ""
 px.set_mapbox_access_token(mapbox_token)
 
 
